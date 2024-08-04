@@ -9,15 +9,14 @@ var Board = /** @class */ (function () {
             _this.board[row][col] = piece;
             return true;
         };
-        this.getFreeCells = function () {
-            var freeCells = new Array();
+        this.isThereAFreeCell = function () {
             for (var i = 0; i < _this.size; i++) {
                 for (var j = 0; j < _this.size; j++) {
                     if (_this.board[i][j] == null)
-                        freeCells.push([i, j]);
+                        return true;
                 }
             }
-            return freeCells;
+            return false;
         };
         this.printBoard = function () {
             for (var i = 0; i < _this.size; i++) {

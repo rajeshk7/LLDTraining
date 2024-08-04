@@ -78,7 +78,7 @@ var TicTacToeGame = /** @class */ (function () {
                         if (!noWinner) return [3 /*break*/, 4];
                         currentPlayer = this.playingQueue.shift();
                         this.gameBoard.printBoard();
-                        if (this.gameBoard.getFreeCells().length == 0) {
+                        if (!this.gameBoard.isThereAFreeCell()) {
                             console.log("No winner");
                             return [3 /*break*/, 4];
                         }

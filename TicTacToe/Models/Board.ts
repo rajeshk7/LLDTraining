@@ -19,15 +19,14 @@ class Board {
         return true
     }
 
-    public getFreeCells = () => {
-        let freeCells = new Array()
+    public isThereAFreeCell = () => {
         for(let i = 0; i < this.size; i++) {
             for(let j = 0; j < this.size; j++) {
                 if(this.board[i][j] == null)
-                    freeCells.push([i, j])
+                    return true
             }
         }
-        return freeCells
+        return false
     }
 
     public printBoard = () => {

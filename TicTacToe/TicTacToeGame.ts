@@ -47,7 +47,7 @@ class TicTacToeGame {
             while(noWinner) {
                 let currentPlayer: Player = this.playingQueue.shift() as Player
                 this.gameBoard.printBoard()
-                if(this.gameBoard.getFreeCells().length == 0) {
+                if(!this.gameBoard.isThereAFreeCell()) {
                     console.log("No winner")
                     break
                 }
